@@ -1,0 +1,48 @@
+activity/search.json:
+  - target
+  - target_id
+  - keyword
+  - max_id
+  - since_id
+  - count
+activity/member.json:
+  - member_id
+activity/friends.json:
+  - member_id
+  - count
+activity/community.json:
+  - community_id
+  - count
+#activity/post.json:
+#  - body
+#  - public_flag
+#  - in_reply_to_activity_id
+#  - uri
+#  - target
+#  - target_id
+#activity/delete.json:
+#  - actibity_id
+activity/mentions.json:
+  - count
+member/community.json:
+  - member_id
+member/search.json:
+  - target
+  - target_id
+#member/friend_accept.json:
+#  - member_id
+#  - reject
+#member/friend_request.json:
+#  - member_id
+#  - reject
+community/search.json:
+  - keyword
+community/member.json:
+  - community_id
+#community/join.json:
+#  - community_id
+#  - leave
+#push/search.json:
+#push/count.json:
+#push/read.json:
+#  - id

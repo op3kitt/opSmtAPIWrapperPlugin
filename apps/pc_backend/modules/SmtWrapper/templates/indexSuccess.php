@@ -1,4 +1,5 @@
 <?php if (opConfig::get('enable_jsonapi')) : ?>
+<?php echo link_to(__('Create'), 'SmtWrapper/index') ?>
 <?php if($templates) : ?>
   <table>
   <tr><th>Id</th><th><?php echo __('Set name') ?></th><th></th><th></th></tr>
@@ -56,13 +57,29 @@ function SmtAPIPreviewJSON()
 <?php if(!$form->isNew()): ?>
 <table>
 <tr><th><?php echo __('Parameter name') ?></th><th><?php echo __('Parameter value') ?></th><th></th><th></th></tr>
-<?php foreach($parameters as $parameter): ?>
-<?php $pform = new SmtApiWrapperSetParameterForm($parameter); ?>
-<tr><?php $pform->renderHiddenFields(); ?></tr>
-<?php endforeach ?>
-<?php $pform = new SmtApiWrapperSetParameterForm(); ?>
+<?php for($i = 0;$i < $parameters->count();$i++): ?>
+<?php $pform = new SmtApiWrapperSetParameterForm($parameters->getRaw($i)); ?>
 <tr>
-<form action="<?php echo url_for('SmtWrapper/edit?app='.$sf_request->getParameter('app', 'pc')) ?>" method="post">
+<form action="<?php echo url_for('SmtWrapper/paramEdit?id='.$pform->getObject()->getId()) ?>" method="post">
+<td>
+<?php echo $pform->renderHiddenFields(); ?>
+<?php echo $pform['parameter_name']->renderError(); ?>
+<?php echo $pform['parameter_name']->render(); ?>
+</td>
+<td>
+<?php echo $pform['parameter_value']->renderError(); ?>
+<?php echo $pform['parameter_value']->render(); ?>
+</td>
+<td><input type="submit" value="<?php echo __('Edit') ?>" /></td>
+<td><?php echo link_to(__('Delete'), 'SmtWrapper/paramDelete?id='.$pform->getObject()->getId()) ?></td>
+</form>
+</tr>
+<?php endfor ?>
+<?php $data = new SmtApiWrapperSetParameter(); ?>
+<?php $data->setSmtApiWrapperSetId($id); ?>
+<?php $pform = new SmtApiWrapperSetParameterForm($data); ?>
+<tr>
+<form action="<?php echo url_for('SmtWrapper/paramEdit') ?>" method="post">
 <td>
 <?php echo $pform->renderHiddenFields(); ?>
 <?php echo $pform['parameter_name']->renderError(); ?>
@@ -76,4 +93,7 @@ function SmtAPIPreviewJSON()
 </form>
 </tr>
 </table>
+パラメーターには次の値が使用可能です。<br />
+{member_id}:メンバーのID<br />
+{community_id}:コミュニティのID
 <?php endif ?>

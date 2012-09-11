@@ -33,5 +33,19 @@ class opSmtAPIWrapperPluginRouting
         array('id' => '\d+')
       )
     );
+    $routing->prependRoute('ParameterDelete',
+      new sfRoute(
+        '/SmtWrapper/paramDelete/:id',
+        array('module' => 'SmtWrapper', 'action' => 'paramDelete'),
+        array('id' => '\d+')
+      )
+    );
+    $routing->prependRoute('ParameterEdit',
+      new sfRoute(
+        '/SmtWrapper/paramEdit/:id',
+        array('module' => 'SmtWrapper', 'action' => 'paramEdit'),
+        array('id' => '\d+')
+      )
+    );
   }
 }

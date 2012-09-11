@@ -13,7 +13,8 @@ abstract class PluginSmtApiWrapperSetParameterForm extends BaseSmtApiWrapperSetP
   public function setup()
   {
     parent::setup();
+    $this->setWidget('smt_api_wrapper_set_id', new sfWidgetFormInputHidden());
 
-    unset($this['id'], $this['SmtAPIWrapperSet_id'], $this['created_at'], $this['updated_at']);
+    unset($this['id'], $this['created_at'], $this['updated_at']);
   }
 }
