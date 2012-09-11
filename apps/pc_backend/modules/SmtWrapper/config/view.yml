@@ -1,0 +1,5 @@
+indexSuccess:
+  javascripts:
+    - jquery.min.js
+    - jquery.tmpl.min.js
+    - ../opSmtAPIWrapperPlugin/js/json2.js

@@ -1,0 +1,33 @@
+options:
+  charset: utf8
+
+SmtApiWrapperSet:
+  actAs: [Timestampable]
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    set_name: { type: string(64), default: "", notnull: true, comment: "SetName" }
+    api_name: { type: string(64), default: "", notnull: true, comment: "APIName" }
+    template: { type: text, default: "", notnull: true, comment: "Template in jquery.tmpl" }
+    template_json: { type: string(64), default: "", notnull: true, comment: "Template output File" }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves templates of SmtAPIWrapper"
+    
+SmtApiWrapperSetParameter:
+  actAs: [Timestampable]
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    smt_api_wrapper_set_id: { type: integer(4), notnull: true }
+    parameter_name: { type: string(64), default: "", notnull: true, comment: "Parameter name" }
+    parameter_value: { type: string(64), default: "", notnull: true, comment: "Parameter value" }
+  relations:
+    SmtApiWrapperSet:
+      foreignAlias: SmtApiWrapperSet
+      onDelete: cascade
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves parameters of SmtAPIWrapper"

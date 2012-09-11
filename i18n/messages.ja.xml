@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="">
+        <source>Set name</source>
+        <target>セットタイトル</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Api name</source>
+        <target>API名</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Template</source>
+        <target>テンプレート</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Html Preview</source>
+        <target>プレビュー</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>JSON Preview</source>
+        <target>API結果のプレビュー</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Parameter name</source>
+        <target>パラメーター名</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Parameter value</source>
+        <target>パラメーター</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
