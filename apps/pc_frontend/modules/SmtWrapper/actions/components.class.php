@@ -20,5 +20,6 @@ class SmtWrapperComponents extends sfComponents
   public function executeSmtAPIBox()
   {
     $this->templateSet = Doctrine::getTable('SmtApiWrapperSet')->find($this->gadget->getConfig('value'));
+    $this->parameters = Doctrine::getTable('SmtApiWrapperSetParameter')->findBySmtApiWrapperSetId($this->gadget->getConfig('value'));
   }
 }

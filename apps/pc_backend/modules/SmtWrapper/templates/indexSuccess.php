@@ -38,16 +38,30 @@ $jsonData = array(
   var openpne = <?php echo json_encode($jsonData) ?>;
 function SmtAPIPreview()
 {
+	var param = {apiKey:openpne.apiKey};
+	<?php if($parameters):?>
+	<?php for($i = 0;$i < $parameters->count();$i++): ?>
+	<?php $param = $parameters->getRaw($i) ?>
+	param.<?php echo $param->getParameterName() ?> = "<?php echo ($param->getParameterValue()=='{member_id}'||$param->getParameterValue()=='{community_id}')?1:$param->getParameterValue(); ?>";
+	<?php endfor ?>
+	<?php endif ?>
   $.template('preview', $('#smt_api_wrapper_set_template').val());
   $('#preview').html('');
-  $.getJSON(openpne.apiBase+$('#smt_api_wrapper_set_api_name').val(),{apiKey:openpne.apiKey},function(json){
+  $.getJSON(openpne.apiBase+$('#smt_api_wrapper_set_api_name').val(),param,function(json){
     $('#preview').html($.tmpl('preview', json.data));
   });
 }
 
 function SmtAPIPreviewJSON()
 {
-	  $.getJSON(openpne.apiBase+$('#smt_api_wrapper_set_api_name').val(),{apiKey:openpne.apiKey},function(json){
+	var param = {apiKey:openpne.apiKey};
+	<?php if($parameters):?>
+	<?php for($i = 0;$i < $parameters->count();$i++): ?>
+	<?php $param = $parameters->getRaw($i) ?>
+	param.<?php echo $param->getParameterName() ?> = "<?php echo $param->getParameterValue()=='{member_id}'?1:$param->getParameterValue(); ?>";
+	<?php endfor ?>
+	<?php endif ?>
+	  $.getJSON(openpne.apiBase+$('#smt_api_wrapper_set_api_name').val(),param,function(json){
 		    $('#preview_json').text(JSON.stringify(json.data, null, 2));
 		  });
 }
@@ -94,6 +108,5 @@ function SmtAPIPreviewJSON()
 </tr>
 </table>
 <?php echo __('The following values are available for parameters.')?><br />
-{member_id}:<?php echo __('Member Id')?><br />
-{community_id}:<?php echo __('Community Id')?>
+{member_id}:<?php echo __('Member Id')?>
 <?php endif ?>
