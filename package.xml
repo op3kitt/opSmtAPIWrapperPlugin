@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>opSmtAPIWrapperPlugin</name>
+ <channel>plugins.openpne.jp</channel>
+ <summary>スマートフォンAPIガジェット</summary>
+ <description>スマートフォンAPIから取得したデータを表示するガジェットを追加します。</description>
+ <lead>
+  <name>kit.t</name>
+  <user>kitt</user>
+  <email />
+  <active>yes</active>
+ </lead>
+ <date>2012-09-13</date>
+ <time>19:35:05</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license>Apache</license>
+ <notes>
+Add gadgets for SmartPhone API
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="812ece396cfd22967b811c9eceee3573" name="apps/pc_backend/modules/SmtWrapper/actions/actions.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="720820711fd472674ebb281a35af51b1" name="apps/pc_backend/modules/SmtWrapper/config/view.yml" role="data" />
+   <file baseinstalldir="/" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="apps/pc_backend/modules/SmtWrapper/templates/editSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="ee947e99ce02f9bcf8336c014df83ce7" name="apps/pc_backend/modules/SmtWrapper/templates/indexSuccess.php" role="data" />
+   <file baseinstalldir="/" md5sum="1bb50533d3be46b958849ed9d36daaa7" name="apps/pc_frontend/modules/SmtWrapper/actions/components.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="f67f89d132c29b5de0cea61550a6955f" name="apps/pc_frontend/modules/SmtWrapper/templates/_SmtAPIBox.php" role="data" />
+   <file baseinstalldir="/" md5sum="79ac5d46d322f7af502a5947e814c20c" name="config/api_param.yml" role="data" />
+   <file baseinstalldir="/" md5sum="4097f8cee9d2612b23614e01ba44d744" name="config/config.php" role="data" />
+   <file baseinstalldir="/" md5sum="395bcd0a814a432df9a5718c571fad71" name="config/gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/login_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/profile_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/side_banner_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/smartphone_community_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/smartphone_footer_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/smartphone_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/smartphone_login_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="61ab0aaddaa78a8cdfb11ccb78b4cfb6" name="config/smartphone_profile_gadget.yml" role="data" />
+   <file baseinstalldir="/" md5sum="caff51b241ff7efa341a13202173a34c" name="config/doctrine/shema.yml" role="data" />
+   <file baseinstalldir="/" md5sum="2c3d15102ad618dbafefd8a607ee48a1" name="data/fixtures/000_revision.yml" role="data" />
+   <file baseinstalldir="/" md5sum="0ac96dac0a5df17f436b5a3f9bd0e288" name="data/fixtures/010_import_navi_menu.yml" role="data" />
+   <file baseinstalldir="/" md5sum="dcc0bb7ee69a4171d71ccefa5d295ec3" name="i18n/messages.ja.xml" role="data" />
+   <file baseinstalldir="/" md5sum="7aa9d36128cbf1ff2488d6a52af9c03a" name="lib/opSmtAPIWrapperPluginObserver.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="6fa0828538275fd8639120ee7fa5d520" name="lib/opSmtAPIWrapperPluginRouting.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="20c5e72bc3b7d23f63d45b8b4ef0f4d1" name="lib/filter/doctrine/PluginSmtAPIWrapperSetFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="1356aa7b24f0ff84d86e80bf990e12c8" name="lib/filter/doctrine/PluginSmtApiWrapperSetParameterFormFilter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="ddd5fe04df68caad38868060b9803ed5" name="lib/form/doctrine/PluginSmtAPIWrapperSetForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="d57aebe29aed12d2c02103f2273d1a5a" name="lib/form/doctrine/PluginSmtApiWrapperSetParameterForm.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="6c7f6adb6b27193eb9ec52c1d5e541ce" name="lib/model/doctrine/PluginSmtAPIWrapperSet.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="a825483187d54cb5703b0404929fa4dc" name="lib/model/doctrine/PluginSmtApiWrapperSetParameter.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="581116d0e80d1541be1d34fedd09094b" name="lib/model/doctrine/PluginSmtApiWrapperSetParameterTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="8906edfb2cb18c4353dfb39512772652" name="lib/model/doctrine/PluginSmtAPIWrapperSetTable.class.php" role="data" />
+   <file baseinstalldir="/" md5sum="6059fe5458d6348af2659d38af527912" name="test/bootstrap/database.php" role="data" />
+   <file baseinstalldir="/" md5sum="155ce720c060aa5fc9e2bbbc779b7a13" name="test/bootstrap/functional.php" role="data" />
+   <file baseinstalldir="/" md5sum="53df737807ad0e3ba7dd2abb8cab3e3c" name="test/bootstrap/unit.php" role="data" />
+   <file baseinstalldir="/" md5sum="8471fade12b0760fab6715ffb8b8f9e4" name="test/fixtures/test_data.yml" role="data" />
+   <file baseinstalldir="/" md5sum="8a98cacfcc151f2808c399543fd52679" name="test/functional/mobile_frontend/skeletonActionsTest.php" role="data" />
+   <file baseinstalldir="/" md5sum="1faa199e87c1ce270e86edee706b37fd" name="test/functional/pc_frontend/skeletonActionsTest.php" role="data" />
+   <file baseinstalldir="/" md5sum="52440ab0abcc01c98551283f1e9942e1" name="test/unit/model/SkeletonTest.php" role="data" />
+   <file baseinstalldir="/" md5sum="3311126e35ed1abe07a45c28c331fb66" name="web/js/json2.js" role="data" />
+   <file baseinstalldir="/" md5sum="8ac5f66ba87e7260a45af2c688313c4b" name="web/js/README" role="data" />
+   <file baseinstalldir="/" md5sum="f217c5fe529038484d7a557c82cb415c" name="dependencies.yml" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>openpne</name>
+    <channel>plugins.openpne.jp</channel>
+    <min>3.8.0</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2012-09-13</date>
+   <license>Apache</license>
+   <notes>
+Add gadgets for SmartPhone API
+   </notes>
+  </release>
+ </changelog>
+</package>
