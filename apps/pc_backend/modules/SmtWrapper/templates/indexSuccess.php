@@ -93,7 +93,7 @@ function SmtAPIPreviewJSON()
 </form>
 </tr>
 </table>
-パラメーターには次の値が使用可能です。<br />
-{member_id}:メンバーのID<br />
-{community_id}:コミュニティのID
+<?php echo __('The following values are available for parameters.')?><br />
+{member_id}:<?php echo __('Member Id')?><br />
+{community_id}:<?php echo __('Community Id')?>
 <?php endif ?>

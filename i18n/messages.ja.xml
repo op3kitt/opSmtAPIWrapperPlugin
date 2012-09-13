@@ -3,6 +3,10 @@
   <file orginal="global" source-language="en" datatype="plaintext">
     <body>
       <trans-unit id="">
+        <source>Create new set</source>
+        <target>新規作成</target>
+      </trans-unit>
+      <trans-unit id="">
         <source>Set name</source>
         <target>セットタイトル</target>
       </trans-unit>
@@ -29,6 +33,18 @@
       <trans-unit id="">
         <source>Parameter value</source>
         <target>パラメーター</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The following values are available for parameters.</source>
+        <target>パラメーターには以下の値が使用可能です。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Member Id</source>
+        <target>メンバーのID</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Community Id</source>
+        <target>コミュニティのID</target>
       </trans-unit>
     </body>
   </file>
