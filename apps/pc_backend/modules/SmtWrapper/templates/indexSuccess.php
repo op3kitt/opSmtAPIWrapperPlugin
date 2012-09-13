@@ -19,7 +19,7 @@
     <?php echo $form ?>
     <tr>
       <td colspan="2">
-        <input type="submit" />
+        <input type="submit" value="<?php echo __('Edit')?>" />
       </td>
     </tr>
   </table>
@@ -48,11 +48,11 @@ function SmtAPIPreview()
 function SmtAPIPreviewJSON()
 {
 	  $.getJSON(openpne.apiBase+$('#smt_api_wrapper_set_api_name').val(),{apiKey:openpne.apiKey},function(json){
-		    $('#preview_json').html(JSON.stringify(json.data, null, 2));
+		    $('#preview_json').text(JSON.stringify(json.data, null, 2));
 		  });
 }
 //]]></script>
-<pre id="preview_json"></pre>
+<pre id="preview_json" style="min-height: 35px;"></pre>
 <div id="preview" style="border:solid black 1px;padding: 5px;width: 300px;"></div>
 <?php if(!$form->isNew()): ?>
 <table>
