@@ -1,0 +1,4 @@
+SnsConfig:
+  op_smt_api_wrapper_plugin_current_revision:
+    name: "opSmtAPIWrapperPlugin_revision"
+    value: 1

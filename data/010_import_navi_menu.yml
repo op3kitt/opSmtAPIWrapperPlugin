@@ -1,0 +1,11 @@
+Navigation:
+  default_navigation_message:
+    type: "backend_side"
+    uri:  "SmtWrapper/index"
+    sort_order: 7
+    Translation:
+      ja_JP:
+        caption: "スマートフォンAPI"
+      en:
+        caption: "SmartPhone API"
+        
