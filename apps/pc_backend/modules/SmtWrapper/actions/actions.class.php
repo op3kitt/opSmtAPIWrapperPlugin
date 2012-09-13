@@ -50,7 +50,7 @@ class SmtWrapperActions extends sfActions
     if($form->isValid()){
       $form->save();
       $paramaters = Doctrine::getTable('SmtAPIWrapperSetParameter')->findBySmtApiWrapperSetId($form->getObject()->getId());
-      if(!$paramaters)
+      if(!$paramaters->count())
       {
         $parameters = sfYaml::load(realpath(__DIR__.'/../../../../../config/api_param.yml'));
         if(isset($parameters[$form->getObject()->getApi_name()]))
