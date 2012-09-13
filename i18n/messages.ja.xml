@@ -42,10 +42,6 @@
         <source>Member Id</source>
         <target>メンバーのID</target>
       </trans-unit>
-      <trans-unit id="">
-        <source>Community Id</source>
-        <target>コミュニティのID</target>
-      </trans-unit>
     </body>
   </file>
 </xliff>
