@@ -1,0 +1,13 @@
+SmtAPIBox:
+  caption:
+    ja_JP: "スマートフォンAPIボックス"
+  description:
+    ja_JP: "スマートフォンAPIボックスを設置できます。"
+  component: [SmtWrapper, SmtAPIBox]
+  config:
+    value:
+      Name:       "template_set"
+      Caption:    "表示セット"
+      FormType:   "input"
+      ValueType:  "integer"
+      IsRequired: true
