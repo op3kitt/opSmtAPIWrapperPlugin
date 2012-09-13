@@ -1,5 +1,5 @@
 <?php if (opConfig::get('enable_jsonapi')) : ?>
-<?php echo link_to(__('Create'), 'SmtWrapper/index') ?>
+<?php echo link_to(__('Create new set'), 'SmtWrapper/index') ?>
 <?php if($templates) : ?>
   <table>
   <tr><th>Id</th><th><?php echo __('Set name') ?></th><th></th><th></th></tr>
